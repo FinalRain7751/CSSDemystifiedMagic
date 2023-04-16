@@ -35,7 +35,7 @@ p {
 
 /* Utility classes */
 .flow-content > * + * {
-  margin-top: 4.25rem;
+  margin-top: 1.25rem;
 }
 
 /* general styling */
