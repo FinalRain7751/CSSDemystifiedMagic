@@ -97,7 +97,6 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  /* opacity: 50%; */
   box-shadow: var(--box-shadow);
 }
 
@@ -137,4 +136,31 @@ img {
 
 .cta .container {
   width: 50%;
+}
+
+@media (max-width: 45rem) {
+  .flow-content > * + * {
+    margin-top: 1rem;
+  }
+
+  .split > * + * {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+
+  ul[class] {
+    flex-direction: column;
+  }
+
+  .hero__content {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 3rem 0;
+  }
+
+  .cta .container {
+    width: 80%;
+  }
 }
