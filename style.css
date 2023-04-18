@@ -35,15 +35,24 @@ p {
 
 /* Utility classes */
 .flow-content > * + * {
-  margin-top: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.split > * + * {
+  margin-left: var(--spacer);
+}
+
+ul[class] {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+  list-style: none;
+  padding: 0;
 }
 
 .bg-dark {
   background: var(--clr-neutral-900);
-}
-
-.bg-image {
-  background-image: url("assets/cta-bg.jpg");
+  color: var(--fg, var(--clr-neutral-100));
 }
 
 /* general styling */
@@ -84,26 +93,35 @@ h3 {
   color: var(--clr-neutral-900);
 }
 
-/* Specific Styling */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* opacity: 50%; */
+  box-shadow: var(--box-shadow);
+}
+
+/* Specific classes */
+
+.pseudo li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--clr-accent-400);
+  transform: translate(-0.5rem, -0.5rem);
+  z-index: -1;
+}
 
 .container {
   padding: 6rem 0;
   width: 80%;
   margin: 0 auto;
-  text-align: left;
 }
 
 .hero__content {
-  /* background: gray; */
   display: flex;
-  justify-content: space-between;
-  align-items: start;
-
-  margin: 1rem auto;
-}
-
-.hero__content .flow-content {
-  margin-right: 2rem;
 }
 
 .hero__content p {
@@ -111,47 +129,12 @@ h3 {
   letter-spacing: 0.1px;
 }
 
-img {
-  max-width: 100%;
+.cta {
+  background-image: url("assets/cta-bg.jpg");
+  background-size: cover;
+  text-align: center;
 }
 
 .cta .container {
   width: 50%;
-}
-
-.cta .flow-content {
-  text-align: center;
-  color: var(--clr-neutral-100);
-}
-
-.mastering {
-  color: var(--clr-neutral-900);
-}
-
-.mastering ul {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: start;
-  list-style: none;
-  padding: 0;
-}
-
-.mastering li > * + * {
-  margin-top: 1rem;
-}
-
-.mastering li + li {
-  padding-left: 1rem;
-}
-
-.mastering.bg-dark h2 {
-  color: var(--clr-accent-400);
-}
-
-.mastering.bg-dark h3 {
-  color: var(--clr-neutral-100);
-}
-
-.mastering.bg-dark p {
-  color: var(--clr-neutral-300);
 }
