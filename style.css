@@ -12,6 +12,12 @@
 
   --ff-primary: "PT Sans", sans-serif;
 
+  --fs-700: 2.25rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1.125rem;
+  --fs-300: 0.9375rem;
+
   --fw-700: 700;
   --fw-400: 400;
 
@@ -149,7 +155,7 @@ header {
   header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
   }
 }
 
