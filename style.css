@@ -263,6 +263,7 @@ section {
   background-position: var(--bg-pos, center);
   background-size: auto;
   height: var(--bg-height);
+  /* min-height: 50vh; */
   padding: var(--spacer);
 }
 
