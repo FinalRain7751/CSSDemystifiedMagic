@@ -119,6 +119,7 @@ h3,
 }
 
 .page-title {
+  width: 12ch;
   font-size: var(--fs-900);
   line-height: 1.1;
 }
@@ -258,37 +259,32 @@ section {
 
 .primary-header {
   background-image: var(--url);
+  background-color: var(--clr-primary-400);
   background-size: cover;
   border-radius: var(--br);
   background-position: var(--bg-pos, center);
-  background-size: auto;
-  height: var(--bg-height);
-  /* min-height: 50vh; */
+  min-height: 50vh;
   padding: var(--spacer);
 }
 
 .bg-home {
   --url: url(./img/hero.jpg);
   --bg-pos: center;
-  --bg-height: 456px;
 }
 
 .bg-blog {
   --url: url(./img/blog.jpg);
   --bg-pos: 76%;
-  --bg-height: 1080px;
+}
+
+.bg-article {
+  --url: url(./img/article.jpg);
 }
 
 @media (min-width: 40em) {
-  .bg-blog {
-    --bg-height: 800px;
+  .bg-article {
+    --bg-pos: -19%;
   }
-}
-
-.bg-story {
-  --url: url(./img/blog.jpg);
-  --bg-pos: 76%;
-  --bg-height: 1080px;
 }
 
 .primary-nav {
@@ -606,4 +602,19 @@ section {
   .article-grid > *:nth-child(8) {
     grid-column: span 3;
   }
+}
+
+/* Article Page  */
+
+.top-articles > * + * {
+  margin-top: 4em;
+}
+
+.article-full {
+  --flow-spacer: 2rem;
+}
+
+.article-full p.section-subtitle {
+  font-weight: var(--fw-200);
+  font-family: var(--ff-serif);
 }
